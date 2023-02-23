@@ -12,18 +12,15 @@ console.log(fixed);
 
 //==================== Check Javascript File=====================//
 
-// function isJavascript(str) {
-//     let str = '.js'
-//     if (str === '.js') {
-//         return true;
-//     }
-//     else {
-//         return false;
-//     }
+function isJavascript(str) {
 
-// }
-// const myFile = isJavascript('index.s');
-// console.log(myFile)
+    const extension = str.split('.').pop();
+    console.log(extension)
+    return extension === 'js';
+
+}
+const myFile = isJavascript('index.js');
+console.log(myFile);
 
 
 // ===============================Oil Price============================//
@@ -77,8 +74,15 @@ const friendList = [
 ];
 
 function isBestFriend(names) {
-    console.log(isBestFriend)
+    for (i = 0; i < names.length; i++) {
+        if (names[0].name === names[1].friend) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 }
 
-isBestFriend(friendList);
+const bestFriend = isBestFriend(friendList);
+console.log(bestFriend);

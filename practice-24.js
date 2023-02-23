@@ -112,13 +112,16 @@ function isPositeNumber(numbers) {
     let newNumberList = [];
     for (let i = 0; i < numbers.length; i++) {
         const number = numbers[i];
-        if (number % 2 === 0 && number >= 0) {
-            newNumberList.push(number);
+        if (number < 0) {
+
+            break;
         }
+        newNumberList.push(number);
     }
+
     return newNumberList;
 }
 
-const numbersList = [-10, 15, 20, 25, 30, 35, 40, 45, 50];
+const numbersList = [10, 15, 20, 25, 30, 35, -40, 45, 50];
 const finalResult = isPositeNumber(numbersList);
 console.log(finalResult);

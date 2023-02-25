@@ -75,7 +75,7 @@ const friendList = [
 
 function isBestFriend(names) {
     for (i = 0; i < names.length; i++) {
-        if (names[0].name === names[1].friend) {
+        if (names[0].name === names[1].friend && names[0].friend === names[1].name) {
             return true;
         } else {
             return false;

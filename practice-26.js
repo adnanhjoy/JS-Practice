@@ -17,3 +17,13 @@ function add(i) {
 }
 const addResult = add(5);
 console.log(addResult);
+
+function factorial(num) {
+    if (num === 5) {
+        return 5;
+    }
+    return num * factorial(num + 1);
+}
+
+const factorialResult = factorial(1);
+console.log(factorialResult);
